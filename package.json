@@ -1,0 +1,29 @@
+{
+  "name": "shibbles",
+  "version": "1.0.0",
+  "description": "Week 4 Group Project by The Zuckerberg Sister Wives -Lou -Cat -Halmai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piwakawaka-2022/Shibbles.git"
+  },
+  "author": "Lou, Halmai, Cat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piwakawaka-2022/Shibbles/issues"
+  },
+  "homepage": "https://github.com/piwakawaka-2022/Shibbles#readme",
+  "devDependencies": {
+    "babel-install": "2.1.0",
+    "webpack": "^5.71.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "react": "^18.0.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
