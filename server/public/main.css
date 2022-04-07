@@ -1,2 +1,7 @@
-.title {
+.canvas {
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
 }
