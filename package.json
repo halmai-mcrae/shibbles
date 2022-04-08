@@ -4,12 +4,12 @@
   "description": "Week 4 Group Project by The Zuckerberg Sister Wives -Lou -Cat -Halmai",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config client/webpack.config.js",
     "start": "node server",
     "test": "jest --verbose",
     "dev": "run-p dev:client dev:server",
-    "watch:client": "npm run build -- --watch",
-    "watch:server": "nodemon server",
+    "dev:client": "npm run build -- --watch",
+    "dev:server": "nodemon server",
     "lint": "eslint --ext .js,.jsx ."
   },
   "babel": {
