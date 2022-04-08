@@ -22,15 +22,15 @@ h3 {
 }
 
 .canvas {
-    height: 500px;
     width: 1000px;
+    height: 600px;
     border-color: lightblue;
     border-width: 5px;
     border-style: solid;
-    margin-left: 200px;
     align-self: center;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 
@@ -69,22 +69,13 @@ button:focus {
   outline: 0;
 }
 
-
-button:active {
-  background-color: #D33A2C;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-  color: #FFFFFF;
-}
-
 button:hover {
   background-color: #FFE3E3;
   border-color: #FAA4A4;
 }
 
-button:active:hover,
-button:focus:hover,
 button:focus {
-  background-color: #D33A2C;
+  background-color: lightcoral;
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
   color: #FFFFFF;
 }

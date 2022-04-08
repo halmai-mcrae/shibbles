@@ -119,7 +119,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function App() {
   var baseArray = Array.from({
-    length: 1000
+    length: 1020
   }, function (i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: i

@@ -5,7 +5,7 @@ import Pixel from './Pixel'
 
 function App() {
   const baseArray = Array.from({
-    length: 1000
+    length: 1020
   }, i => <Pixel key={i}/> )
 
   const [array, setArray] = useState(baseArray)
