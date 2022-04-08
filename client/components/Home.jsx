@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import Pixel from './Pixel'
 
-
-function Home() {
+function Home(props) {
     const [prompt, setPrompt] = useState('')
+    // const [style, setStyle] = useState({width: '20px', backgroundColor: 'white'})
 
     const animal = ['Elephant', 'Squirrel', 'Bear', 'Panda', 'Whale', 'Giraffe']
     const verb = ['eating', 'swimming', 'playing', 'dancing', 'prancing']
@@ -25,6 +26,7 @@ function Home() {
       <h3>A product bought to you by The Zuckerberg Sister Wives</h3>
       <p>{prompt}</p>
       <button onClick={() => rollDice(animal, verb, object)}>Prompt me</button>
+      <button onClick={props.resetButtonClick}>Reset canvas</button>
       <p></p>
     </div>
   )
