@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className="title">
       <h1>SHIBBLES</h1>
-      <h3>A product bought to you by, The Zuckerberg Sister Wives</h3>
+      <h3>A product bought to you by The Zuckerberg Sister Wives</h3>
       <p>{prompt}</p>
       <button onClick={() => rollDice(animal, verb, object)}>Prompt me</button>
       <p></p>
