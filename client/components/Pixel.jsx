@@ -7,9 +7,9 @@ function Pixel () {
   const mouseDrag = (event) => {setStyle({width: '20px', backgroundColor: 'black'})}
   
   return (
-<div  style={style} onDragEnter={() => mouseDrag()} draggable={true}>
-  
-</div>
+      <div 
+      style={style} onDragEnter={() => mouseDrag()} draggable={true}>
+      </div>
   )
 }
 
