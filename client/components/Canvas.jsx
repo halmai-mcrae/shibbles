@@ -6,7 +6,7 @@ function Canvas () {
 
       const array = Array.from({
           length: 1000
-        }, i => <Pixel/> )
+        }, i => <Pixel key={i}/> )
         return [array]
       
 }

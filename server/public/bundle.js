@@ -136,7 +136,9 @@ function Canvas() {
   var array = Array.from({
     length: 1000
   }, function (i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: i
+    });
   });
   return [array];
 }
@@ -232,7 +234,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function Pixel() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     width: '20px',
-    backgroundColor: 'grey'
+    backgroundColor: 'white'
   }),
       _useState2 = _slicedToArray(_useState, 2),
       style = _useState2[0],
