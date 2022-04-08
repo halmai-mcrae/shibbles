@@ -1,16 +1,21 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Pixel from './Pixel'
 
 
 function Canvas (props) {
-
-      // const array = Array.from({
-      //     length: 1000
-      //   }, i => <Pixel key={i}/> )
+  // Turn the stylesArray into an array of Pixel components to display passing in the mouseDragCallback function so each Pixel component can change it's style
+  const pixelArray = props.stylesArray.map((pixelStyle, index) => {
+    return (
+      <Pixel
+        key={index}
+        index={index}
+        style={pixelStyle}
+        mouseDragCallback={() => props.mouseDragCallback(index)}/>
+    )
+  })
   return (
     <>
-    {props.pixelArray}
-    {/* <button>Test</button> */}
+      {pixelArray}
     </>
   )
         

@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
+function Pixel (props) {
+  // When the mouse is dragged over a Pixel, call mouseDragCallback giving it the index on the Pixel that needs to be changed.
+  const mouseDrag = () => {
+    props.mouseDragCallback(props.index)
+  }
 
-
-function Pixel () {
-  const [style, setStyle] = useState({width: '20px', backgroundColor: 'white'})
-  const mouseDrag = (event) => {setStyle({width: '20px', backgroundColor: 'black'})}
-  // const resetCanvas = (event) => {useState({width: '20px', backgroundColor: 'white'})}
-  
   return (
       <div 
-        style={style} onDragEnter={() => mouseDrag()} draggable={true}>
+        style={props.style} 
+        onDragEnter={() => mouseDrag()} 
+        draggable={true}>
       </div>
   )
 }

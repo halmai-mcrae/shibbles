@@ -1,34 +1,37 @@
 import React, { useState } from 'react'
-import Home from './Home'
 import Canvas from './Canvas'
-import Pixel from './Pixel'
+import Home from './Home'
 
 function App() {
-  const baseArray = Array.from({
-    length: 1000
-  }, i => <Pixel key={i}/> )
+  // Starting Styles 
+  const startingStyles = Array.from({length: 1000}, () => {
+    return {width: '20px', backgroundColor: 'white'}
+  })
 
-  const [array, setArray] = useState(baseArray)
+  const [stylesArray, setStylesArray] = useState(startingStyles)
 
   function resetButtonHandler() {
-    console.log('resetButtonClicked')
-    setArray(Array.from({
-      length: 1000
-    }, i => <Pixel key={i}/> ))
+    // Resets the styles in state back to {width: '20px', backgroundColor: 'white'}
+    setStylesArray(startingStyles)
   }
 
-  // const array = Array.from({
-  //   length: 1000
-  // }, i => <Pixel key={i}/> )
+  function mouseDragCallback(index) {
+    // Create a copy of the current stylesArray
+    const newStylesArray = [...stylesArray]
+    // Change the Pixel getting dragged to {width: '20px', backgroundColor: 'black'}
+    newStylesArray[index] = {width: '20px', backgroundColor: 'black'}
+    // Save the newStylesArray into state, re-rendering the page
+    setStylesArray(newStylesArray)
+  }
 
   return (
     <>
       <div className="title">
       </div>
-      {/* This 'main' div is only for styling (so we can use flexbox) */}
       <Home resetButtonClick={resetButtonHandler}/>
       <div className='canvas'>
-        <Canvas pixelArray={array}/>
+        {/* Render the Canvas component giving it the stylesArray to be rendered as well as the mouseDragCallback function to change the Pixels' styles */}
+        <Canvas stylesArray={stylesArray} mouseDragCallback={mouseDragCallback}/>
       </div>
       <div className="main">
       </div>
